@@ -132,12 +132,14 @@ const Hero = () => {
           <div className="space-y-8 max-w-3xl mx-auto text-left text-gray-300">
             {/* GeeksforGeeks */}
             <div>
-              <h3 className="text-lg font-bold text-white">MERN STACK / DSA</h3>
+              <h3 className="text-lg font-bold text-white"></h3>
               <ul className="list-disc ml-6 mt-2 space-y-1">
-                <li>
+
+                <p className="text-sm font-semibold mb-4 text-center">will update soon ⏳ </p>
+                {/* <li>
                   Authored multiple articles on Data Structures, Algorithms, and
                   Web Development topics.
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>

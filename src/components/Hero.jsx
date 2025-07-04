@@ -20,8 +20,8 @@ const Hero = () => {
           transition={{ delay: 0.3, duration: 0.8 }}
         >
           <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-snug bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent">
-              Hi, I’m Rachit
+            <h1 className="text-2xl sm:text-3xl md:text-2xl font-bold leading-snug bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent">
+              hey folks
             </h1>
             <img
               src={profileImg}

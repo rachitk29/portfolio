@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaTwitter, FaPinterest } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTwitter, FaMedium } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -9,6 +9,7 @@ const Footer = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
+
       <div className="flex flex-wrap justify-center items-center gap-6 mb-6">
         <a href="https://github.com/rachitkatariya" target="_blank" rel="noopener noreferrer">
           <FaGithub className="text-2xl text-[#bdbdbd] hover:text-red-400 hover:scale-110 transition-all" />
@@ -18,6 +19,9 @@ const Footer = () => {
         </a>
         <a href="https://x.com/rachitkdev" target="_blank" rel="noopener noreferrer">
           <FaTwitter className="text-2xl text-[#bdbdbd] hover:text-blue-400 hover:scale-110 transition-all" />
+        </a>
+        <a href="https://rachitkatariya.medium.com/" target="_blank" rel="noopener noreferrer">
+          <FaMedium className="text-2xl text-[#bdbdbd] hover:text-blue-400 hover:scale-110 transition-all" />
         </a>
       </div>
 

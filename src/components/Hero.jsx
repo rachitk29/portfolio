@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import profileImg from "../assets/profile.jpg";
 import { Typewriter } from "react-simple-typewriter";
-import backgroundImage from "../assets/gradient.gif";
+import backgroundImage from "../assets/gradient.webp";
 import { FaGithub, FaLinkedin, FaTwitter, FaMedium } from 'react-icons/fa';
 
 
@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <motion.section
       id="home"
-      className="pt-28 pb-5 px-6 flex flex-col items-center justify-center text-center bg-black text-white min-h-screen font-mono"
+      className="pt-28 pb-5 px-6 flex flex-col items-center justify-center text-center bg-black text-white min-h-screen font-sans"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}

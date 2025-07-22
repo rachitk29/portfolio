@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const TABS = [
@@ -13,7 +13,7 @@ const Navbar = ({ activeTab, onTabChange }) => {
 
   const handleTabClick = (value) => {
     onTabChange(value);
-    setMenuOpen(false); // close mobile menu
+    setMenuOpen(false); // close menu on selection
   };
 
   return (
@@ -22,34 +22,54 @@ const Navbar = ({ activeTab, onTabChange }) => {
       <div className="flex items-center justify-between px-4 py-3 md:hidden">
         <h1 className="text-white text-lg font-semibold">rachit</h1>
         <button onClick={() => setMenuOpen(!menuOpen)} className="text-white">
-          {menuOpen ? <X size={24} /> : <Menu size={24} />}
+          {menuOpen ? <X size={20} /> : <Menu size={18} />}
         </button>
       </div>
 
-      {/* Mobile Dropdown */}
-      {menuOpen && (
-        <ul className="flex flex-col gap-4 px-4 pb-4 md:hidden">
-          {TABS.map(({ label, value }) => (
-            <motion.li
-              key={value}
-              onClick={() => handleTabClick(value)}
-              className={`text-white cursor-pointer capitalize ${
-                activeTab === value
-                  ? "text-blue-400 underline"
-                  : "hover:text-blue-300"
-              }`}
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.97 }}
-            >
-              {label}
-            </motion.li>
-          ))}
-        </ul>
-      )}
+<AnimatePresence>
+  {menuOpen && (
+    <motion.div
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      exit={{ y: -100, opacity: 0 }}
+      transition={{ duration: 0.4, ease: "easeInOut" }}
+      className="fixed top-0 left-0 w-full h-screen bg-black flex flex-col items-center justify-center md:hidden z-40"
+    >
+      {/* ❌ Close Icon */}
+      <button
+        onClick={() => setMenuOpen(false)}
+        className="absolute top-6 right-6 text-white"
+      >
+        <X size={20} />
+      </button>
 
-      {/* Desktop Scrollable Menu */}
+      {/* Navigation Links as UL */}
+      <ul className="list-none flex flex-col gap-10 items-center">
+        {TABS.map(({ label, value }) => (
+          <motion.li
+            key={value}
+            onClick={() => handleTabClick(value)}
+            className={`text-white text-2xl font-semibold cursor-pointer capitalize ${
+              activeTab === value
+                ? "text-blue-400 underline"
+                : "hover:text-blue-300"
+            }`}
+            whileHover={{ scale: 1.08 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            {label}
+          </motion.li>
+        ))}
+      </ul>
+    </motion.div>
+  )}
+</AnimatePresence>
+
+
+
+      {/* Desktop Menu */}
       <div className="hidden md:block overflow-x-auto">
-      <ul className="flex justify-center gap-6 px-6 py-4 text-white font-medium whitespace-nowrap">
+        <ul className="flex justify-center gap-6 px-6 py-4 text-white font-medium whitespace-nowrap">
           {TABS.map(({ label, value }) => (
             <motion.li
               key={value}
@@ -72,7 +92,3 @@ const Navbar = ({ activeTab, onTabChange }) => {
 };
 
 export default Navbar;
-
-
-
-

@@ -2,7 +2,6 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-/* Root Variables for Gradient Accent Colors */
 :root {
   --accent-blue: #4fc3f7;
   --accent-green: #81c784;
@@ -13,13 +12,11 @@
   --white-text: #ffffff;
 }
 
-/* Global Styles */
 body {
-  font-family: 'Arial', sans-serif;
+  @apply font-sans;
   background-color: #212121;
   color: #bdbdbd;
 }
-
 /* Animation for Icons */
 
 @keyframes pop-wiggle {

@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import profileImg from "../assets/profile.jpg";
 import { Typewriter } from "react-simple-typewriter";
 import backgroundImage from "../assets/gradient.gif";
+import { FaGithub, FaLinkedin, FaTwitter, FaMedium } from 'react-icons/fa';
+
 
 const Hero = () => {
   return (
@@ -12,6 +14,44 @@ const Hero = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
+      {/* <div className="border border-white/30 hover:border-white transition-all rounded-lg p-4 w-64 h-auto flex justify-center items-center overflow-hidden mb-4 cursor-pointer">
+        <div className="flex flex-wrap justify-center items-center gap-7">
+          <a href="https://github.com/rachitkatariya" target="_blank" rel="noopener noreferrer">
+            <FaGithub className="text-2xl text-[#bdbdbd] hover:text-red-400 hover:scale-110 transition-all" />
+          </a>
+          <a href="https://www.linkedin.com/in/rachitkatariya/" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin className="text-2xl text-[#bdbdbd] hover:text-blue-400 hover:scale-110 transition-all" />
+          </a>
+          <a href="https://x.com/rachitkdev" target="_blank" rel="noopener noreferrer">
+            <FaTwitter className="text-2xl text-[#bdbdbd] hover:text-blue-400 hover:scale-110 transition-all" />
+          </a>
+          <a href="https://rachitkatariya.medium.com/" target="_blank" rel="noopener noreferrer">
+            <FaMedium className="text-2xl text-[#bdbdbd] hover:text-blue-400 hover:scale-110 transition-all" />
+          </a>
+        </div>
+      </div> */}
+
+      <div className="border border-white/30 hover:border-white transition-all rounded-lg p-4 w-64 h-auto flex justify-center items-center overflow-hidden mb-16">
+  <div className="flex flex-wrap justify-center items-center gap-7">
+    <a href="https://github.com/rachitkatariya" target="_blank" rel="noopener noreferrer">
+      <FaGithub className="text-2xl text-[#bdbdbd] hover:text-red-400 transition-transform hover:animate-pop-wiggle" />
+    </a>
+    <a href="https://www.linkedin.com/in/rachitkatariya/" target="_blank" rel="noopener noreferrer">
+      <FaLinkedin className="text-2xl text-[#bdbdbd] hover:text-blue-400 transition-transform hover:animate-pop-wiggle" />
+    </a>
+    <a href="https://x.com/rachitkdev" target="_blank" rel="noopener noreferrer">
+      <FaTwitter className="text-2xl text-[#bdbdbd] hover:text-blue-400 transition-transform hover:animate-pop-wiggle" />
+    </a>
+    <a href="https://rachitkatariya.medium.com/" target="_blank" rel="noopener noreferrer">
+      <FaMedium className="text-2xl text-[#bdbdbd] hover:text-blue-400 transition-transform hover:animate-pop-wiggle" />
+    </a>
+  </div>
+</div>
+
+      
+
+      
+
       <div className="w-full max-w-4xl mx-auto px-4">
         <motion.div
           className="flex flex-col items-center gap-4 mb-4"
@@ -19,6 +59,7 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
         >
+
           <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
             <h1 className="text-2xl sm:text-3xl md:text-2xl font-bold leading-snug bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent">
               hey folks

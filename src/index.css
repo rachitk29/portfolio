@@ -20,6 +20,30 @@ body {
   color: #bdbdbd;
 }
 
+/* Animation for Icons */
+
+@keyframes pop-wiggle {
+  0% {
+    transform: scale(2) translateX(4px);
+  }
+  25% {
+    transform: scale(2) translateX(-8px);
+  }
+  50% {
+    transform: scale(2) translateX(-4px);
+  }
+  75% {
+    transform: scale(2) translateX(4px);
+  }
+  100% {
+    transform: scale(2) translateX(1);
+  }
+}
+
+.hover\:animate-pop-wiggle:hover {
+  animation: pop-wiggle 1s ease-in-out;
+}
+
 /* Utilities */
 .bg-black {
   background-color: #212121;

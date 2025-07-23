@@ -4,45 +4,43 @@ import { useFrame } from "@react-three/fiber";
 
 const FallingStars = () => {
   const ref = useRef();
+  const starCount = 1000;
 
-  const count = 1000;
+  const { positions, velocities } = useMemo(() => {
+    const positions = new Float32Array(starCount * 3);
+    const velocities = [];
 
-  const { positions, speeds } = useMemo(() => {
-    const positions = new Float32Array(count * 3);
-    const speeds = [];
-
-    for (let i = 0; i < count; i++) {
+    for (let i = 0; i < starCount; i++) {
+      // Spread diagonally from top-left and top-right
       const fromLeft = Math.random() < 0.5;
-      const x = fromLeft ? -300 + Math.random() * 200 : 300 - Math.random() * 200;
-      const y = 200 + Math.random() * 200;
+      const x = fromLeft ? -400 + Math.random() * 400 : 400 - Math.random() * 400;
+      const y = 400 + Math.random() * 300;
       const z = Math.random() * 400 - 200;
 
       positions.set([x, y, z], i * 3);
 
-      // Move diagonally toward center-bottom
-      speeds.push({
-        x: fromLeft ? 0.4 + Math.random() * 0.2 : -0.4 - Math.random() * 0.2,
-        y: -0.7 - Math.random() * 0.3,
+      velocities.push({
+        x: fromLeft ? 1.2 + Math.random() * 0.3 : -1.2 - Math.random() * 0.3,
+        y: -1.8 - Math.random() * 0.5
       });
     }
 
-    return { positions, speeds };
+    return { positions, velocities };
   }, []);
 
   useFrame(() => {
     const pos = ref.current.geometry.attributes.position.array;
 
-    for (let i = 0; i < count; i++) {
-      const idx = i * 3;
+    for (let i = 0; i < starCount; i++) {
+      const i3 = i * 3;
+      pos[i3] += velocities[i].x;
+      pos[i3 + 1] += velocities[i].y;
 
-      pos[idx] += speeds[i].x;     // x
-      pos[idx + 1] += speeds[i].y; // y
-
-      // Reset if out of screen (below -300 or too far side)
-      if (pos[idx + 1] < -300 || Math.abs(pos[idx]) > 400) {
+      // Reset stars that fall below or go out of bounds
+      if (pos[i3 + 1] < -400 || Math.abs(pos[i3]) > 700) {
         const fromLeft = Math.random() < 0.5;
-        pos[idx] = fromLeft ? -300 + Math.random() * 200 : 300 - Math.random() * 200;
-        pos[idx + 1] = 200 + Math.random() * 200;
+        pos[i3] = fromLeft ? -400 + Math.random() * 400 : 400 - Math.random() * 400;
+        pos[i3 + 1] = 400 + Math.random() * 300;
       }
     }
 
@@ -59,7 +57,7 @@ const FallingStars = () => {
           itemSize={3}
         />
       </bufferGeometry>
-      <pointsMaterial color="#ffffff" size={1.2} sizeAttenuation />
+      <pointsMaterial color="#ffffff" size={1.4} sizeAttenuation />
     </points>
   );
 };

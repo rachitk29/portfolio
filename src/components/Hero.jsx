@@ -14,7 +14,7 @@ const Hero = () => {
       transition={{ duration: 1 }}
     >
       {/* Avatar & Icons */}
-      <div className="cursor-pointer border border-transparent transition-all rounded-lg p-4 w-64 h-auto flex flex-col items-center gap-6 mb-16 group">
+      <div className="cursor-pointer border border-transparent transition-all rounded-lg p-4 w-64 h-auto flex flex-col items-center gap-6 mb-8 group">
         {/* Profile Section */}
         <div className="relative w-52 h-52 rounded-md border-2 border-blue-500 shadow-md overflow-hidden">
           <img
@@ -49,7 +49,7 @@ const Hero = () => {
       {/* About Text */}
       <div className="w-full max-w-4xl mx-auto px-4">
         <motion.p
-          className="text-base sm:text-lg leading-relaxed text-white px-2 sm:px-0 mt-4"
+          className="text-base sm:text-lg leading-relaxed text-white px-2 sm:px-0 mt-2"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 1 }}
@@ -91,7 +91,7 @@ const Hero = () => {
           transition={{ delay: 0.9 }}
         >
           <h2 className="text-xl font-semibold mb-10 text-center">Education</h2>
-          <div className="relative border-l-2 border-gray-800 pl-10 ml-4">
+          <div className="relative border-l-2 border-gray-600 pl-10 ml-4">
             <div className="mb-14 relative">
               <div className="absolute -left-[18px] top-1 w-4 h-4 rounded-full bg-gray-400 border-4 border-black"></div>
               <div className="ml-4 text-left">

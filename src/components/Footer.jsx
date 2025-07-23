@@ -9,7 +9,6 @@ const Footer = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-
       <div className="flex flex-wrap justify-center items-center gap-6 mb-6">
         <a href="https://github.com/rachitkatariya" target="_blank" rel="noopener noreferrer">
           <FaGithub className="text-2xl text-[#bdbdbd] hover:text-red-400 hover:scale-110 transition-all" />

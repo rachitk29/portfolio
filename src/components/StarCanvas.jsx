@@ -17,7 +17,7 @@ const StarCanvas = () => {
         camera={{ position: [0, 0, 100], fov: 75 }}
         style={{ width: "100%", height: "100%" }}
       >
-        {showStars && <FallingStars />} {/* ⭐ show stars after delay */}
+        {showStars && <FallingStars />} 
       </Canvas>
     </div>
   );

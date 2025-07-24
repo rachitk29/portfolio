@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin, FaTwitter, FaMedium } from 'react-icons/fa';
 const Footer = () => {
   return (
     <motion.footer
-      className="bg-black text-[#bdbdbd] py-10 px-6 text-center"
+      className="bg-black text-[#bdbdbd] py-10 px-6 text-center font-sans"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
@@ -25,7 +25,7 @@ const Footer = () => {
       </div>
 
       <p className="text-sm text-[#bdbdbd]">&copy; 2025 All rights reserved</p>
-      <p className="text-sm text-[#bdbdbd] pt-2">Made with ❤️ by <span className="text-blue-400 font-medium">Rachit</span></p>
+      <p className="text-sm text-[#bdbdbd] pt-2">Made with ❤️ by <span className="text-blue-400 font-medium">Rachit Katariya</span></p>
     </motion.footer>
   );
 };

@@ -13,14 +13,14 @@ const Navbar = ({ activeTab, onTabChange }) => {
 
   const handleTabClick = (value) => {
     onTabChange(value);
-    setMenuOpen(false); // Close menu on selection
+    setMenuOpen(false); 
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 px-4">
-      {/* ---------------------- Desktop Nav ---------------------- */}
+    <nav className="font-sans top-0 left-0 w-full z-50 px-4">
+      {/* for desktop */}
       <div className="hidden md:flex justify-center pt-4">
-        <div className="bg-[#1f1f1f] text-white rounded-full px-6 py-2 flex items-center gap-8 shadow-md">
+        <div className="bg-[#31302f] text-white rounded-full px-6 py-2 flex items-center gap-8 shadow-md">
           <ul className="flex items-center gap-6 text-sm">
             {TABS.map(({ label, value }) => (
               <li
@@ -39,7 +39,7 @@ const Navbar = ({ activeTab, onTabChange }) => {
         </div>
       </div>
 
-      {/* ---------------------- Mobile Nav ---------------------- */}
+      {/* Mobile Nav */}
       <div className="flex items-center justify-between px-2 py-3 md:hidden">
         <h1 className="text-white text-lg font-semibold">rachit</h1>
         <button onClick={() => setMenuOpen(!menuOpen)} className="text-white">
@@ -47,7 +47,7 @@ const Navbar = ({ activeTab, onTabChange }) => {
         </button>
       </div>
 
-      {/* ---------------------- Mobile Menu ---------------------- */}
+      {/* Mobile Menu */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div

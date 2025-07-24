@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <motion.section
       id="home"
-      className="pt-28 pb-5 px-6 flex flex-col items-center justify-center text-center text-white min-h-screen font-sans bg-transparent"
+      className="pt-16 pb-5 px-6 flex flex-col items-center justify-center text-center text-white min-h-screen font-sans bg-transparent"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
@@ -67,7 +67,7 @@ const Hero = () => {
           transition={{ delay: 0.8 }}
         >
           <h2 className="text-xl font-semibold mb-6 text-center">Tech Stack</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 text-sm text-gray-300">
+          <div className=" cursor-pointer grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 text-sm text-gray-300">
             {[
               "HTML", "CSS", "JavaScript", "React", "Tailwind CSS",
               "Node.js", "Express", "MongoDB", "C++", "Java",
@@ -75,7 +75,7 @@ const Hero = () => {
             ].map((tech) => (
               <div
                 key={tech}
-                className="bg-black/30 px-4 py-2 rounded-lg text-center shadow-md border border-gray-700 hover:bg-black/50 transition"
+                className="bg-black/30 px-4 py-2 rounded-lg text-center shadow-md border border-gray-700 hover:bg-black/50 transition hover:pop-wiggle"
               >
                 {tech}
               </div>
@@ -91,21 +91,35 @@ const Hero = () => {
           transition={{ delay: 0.9 }}
         >
           <h2 className="text-xl font-semibold mb-10 text-center">Education</h2>
+
           <div className="relative border-l-2 border-gray-600 pl-10 ml-4">
-            <div className="mb-14 relative">
+            <div className="mb-8 relative">
               <div className="absolute -left-[18px] top-1 w-4 h-4 rounded-full bg-gray-400 border-4 border-black"></div>
               <div className="ml-4 text-left">
-                <h3 className="text-lg font-bold">12th (2022)</h3>
-                <p className="text-sm text-gray-300">MPSIC Hardoi</p>
+                <h3 className="text-lg font-bold mb-1">BCA (2022 - 25)</h3>
+                <p className="text-sm text-gray-300 mb-1">CCSU (Meerut University)</p>
+                <p className="text-sm text-gray-300">Grades - 8.0</p>
               </div>
             </div>
+            
+            <div className="relative mb-8">
+              <div className="absolute -left-[18px] top-1 w-4 h-4 rounded-full bg-gray-400 border-4 border-black"></div>
+              <div className="ml-4 text-left">
+                <h3 className="text-lg font-bold mb-1">12th (2020 - 22)</h3>
+                <p className="text-sm text-gray-300 mb-1">MPSIC Hardoi</p>
+                <p className="text-sm text-gray-300">Grades - 8.1</p>
+              </div>
+            </div>
+            
             <div className="relative">
               <div className="absolute -left-[18px] top-1 w-4 h-4 rounded-full bg-gray-400 border-4 border-black"></div>
               <div className="ml-4 text-left">
-                <h3 className="text-lg font-bold">BCA (2022-25)</h3>
-                <p className="text-sm text-gray-300">CCS University Meerut</p>
+                <h3 className="text-lg font-bold mb-1">10th (2018 - 20)</h3>
+                <p className="text-sm text-gray-300 mb-1">SPMIC Meerut </p>
+                <p className="text-sm text-gray-300">Grades - 8.2</p>
               </div>
             </div>
+
           </div>
         </motion.div>
 
@@ -116,9 +130,9 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}
         >
-          <h2 className="text-xl font-semibold mb-10 text-center">Works</h2>
+          <h2 className="text-sm font-semibold mb-4 text-center">work in progress !</h2>
           <div className="space-y-8 max-w-3xl mx-auto text-left text-gray-300">
-            <p className="text-sm font-semibold mb-4 text-center">will update soon ⏳</p>
+            {/* <p className="text-sm font-semibold mb-4 text-center">will update soon ⏳</p> */}
           </div>
         </motion.div>
       </div>

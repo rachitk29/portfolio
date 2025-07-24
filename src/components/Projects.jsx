@@ -24,7 +24,7 @@ const projects = [
 const Projects = () => (
   <motion.section
     id="projects"
-    className="pt-20 pb-28 px-6 bg-light-mode-bg dark:bg-dark-mode-bg min-h-screen"
+    className="pt-20 pb-28 px-6 bg-light-mode-bg dark:bg-dark-mode-bg min-h-screen font-sans"
     initial="hidden"
     whileInView="visible"
     viewport={{ once: true }}

@@ -26,7 +26,7 @@ const Contact = () => {
   return (
     <motion.section
       id="contact"
-      className="pb-8 py-32 px-6 bg-black text-white flex flex-col items-center"
+      className="font-sans pb-8 py-12 px-8 bg-black text-white flex flex-col items-center"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}

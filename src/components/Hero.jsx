@@ -37,7 +37,7 @@ const Hero = () => {
           <a href="https://www.linkedin.com/in/rachitkatariya/" target="_blank" rel="noopener noreferrer">
             <FaLinkedin className="text-2xl text-[#bdbdbd] hover:text-blue-400 transition-colors duration-300" />
           </a>
-          <a href="https://x.com/rachitkdev" target="_blank" rel="noopener noreferrer">
+          <a href="https://x.com/rachitk29" target="_blank" rel="noopener noreferrer">
             <FaTwitter className="text-2xl text-[#bdbdbd] hover:text-blue-400 transition-colors duration-300" />
           </a>
           <a href="https://rachitkatariya.medium.com/" target="_blank" rel="noopener noreferrer">
@@ -97,7 +97,8 @@ const Hero = () => {
               <div className="absolute -left-[18px] top-1 w-4 h-4 rounded-full bg-gray-400 border-4 border-black"></div>
               <div className="ml-4 text-left">
                 <h3 className="text-lg font-bold mb-1">BCA (2022 - 25)</h3>
-                <p className="text-sm text-gray-300 mb-1">CCSU (Meerut University)</p>
+                <p className="text-sm text-gray-300 mb-1">CCS University</p>
+                <p className="text-sm text-gray-300 mb-1"> (Former Meerut University)</p>
                 <p className="text-sm text-gray-300">Grades - 8.0</p>
               </div>
             </div>

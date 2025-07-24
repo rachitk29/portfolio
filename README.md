@@ -28,5 +28,5 @@ This is my personal **developer portfolio** website built to showcase my skills,
 
 If you'd like to collaborate or have any questions, feel free to reach out:
 
-- 📧 [email for work with me](rachiitk29@gmail.com)  
+- 💌 [email for work with me](rachiitk29@gmail.com)  
 - 🔗 [LinkedIn Profile](https://www.linkedin.com/in/rachitkatariya)

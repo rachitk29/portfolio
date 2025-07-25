@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import profileImg from "../assets/profile.jpg";
 import evilProfile from "../assets/evilProfile.jpg";
+import { SiLeetcode } from "react-icons/si";
 import { FaGithub, FaLinkedin, FaTwitter, FaMedium } from "react-icons/fa";
 
 const Hero = () => {
@@ -31,18 +32,21 @@ const Hero = () => {
 
         {/* Social Icons */}
         <div className="flex flex-wrap justify-center items-center gap-7">
-          <a href="https://github.com/rachitkatariya" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/rachitk29" target="_blank" rel="noopener noreferrer">
             <FaGithub className="text-2xl text-[#bdbdbd] hover:text-red-400 transition-colors duration-300" />
           </a>
-          <a href="https://www.linkedin.com/in/rachitkatariya/" target="_blank" rel="noopener noreferrer">
+          <a href="https://leetcode.com/rachitk29" target="_blank" rel="noopener noreferrer">
+            <SiLeetcode  className="text-2xl text-[#bdbdbd] hover:text-yellow-800 transition-colors duration-300" />
+          </a>
+          <a href="https://www.linkedin.com/in/rachitk29/" target="_blank" rel="noopener noreferrer">
             <FaLinkedin className="text-2xl text-[#bdbdbd] hover:text-blue-400 transition-colors duration-300" />
           </a>
           <a href="https://x.com/rachitk29" target="_blank" rel="noopener noreferrer">
             <FaTwitter className="text-2xl text-[#bdbdbd] hover:text-blue-400 transition-colors duration-300" />
           </a>
-          <a href="https://rachitkatariya.medium.com/" target="_blank" rel="noopener noreferrer">
+          {/* <a href="https://rachitk29.medium.com/" target="_blank" rel="noopener noreferrer">
             <FaMedium className="text-2xl text-[#bdbdbd] hover:text-blue-400 transition-colors duration-300" />
-          </a>
+          </a> */}
         </div>
       </div>
 

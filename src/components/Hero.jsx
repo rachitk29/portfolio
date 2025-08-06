@@ -17,27 +17,27 @@ const Hero = () => {
       <div className="cursor-pointer border border-transparent transition-all rounded-lg p-4 w-64 h-auto flex flex-col items-center gap-6 mb-8 group">
         {/* Profile Section */}
         <div className="relative w-52 h-52 rounded-md border-2 border-blue-500 shadow-md overflow-hidden transition-shadow duration-300 hover:shadow-[0_0_4px_4px_rgba(255,255,255,0.25)] hover:border-white">
-  <img
-    src={profileImg}
-    alt="Rachit"
-    className="absolute inset-0 w-full h-full object-cover"
-  />
-</div>
+          <img
+            src={profileImg}
+            alt="Rachit"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        </div>
 
 
         {/* Social Icons */}
         <div className="flex flex-wrap justify-center items-center gap-7">
           <a href="https://github.com/rachitk29" target="_blank" rel="noopener noreferrer">
-            <FaGithub className="text-2xl text-[#bdbdbd] hover:text-red-400 transition-colors duration-300" />
+            <FaGithub className="text-2xl text-[#bdbdbd] hover:text-red-400 transition-colors duration-100" />
           </a>
           <a href="https://leetcode.com/rachitk29" target="_blank" rel="noopener noreferrer">
-            <SiLeetcode  className="text-2xl text-[#bdbdbd] hover:text-yellow-800 transition-colors duration-300" />
+            <SiLeetcode className="text-2xl text-[#bdbdbd] hover:text-amber-400 transition-colors duration-100" />
           </a>
           <a href="https://www.linkedin.com/in/rachitk29/" target="_blank" rel="noopener noreferrer">
-            <FaLinkedin className="text-2xl text-[#bdbdbd] hover:text-blue-400 transition-colors duration-300" />
+            <FaLinkedin className="text-2xl text-[#bdbdbd] hover:text-blue-400 transition-colors duration-100" />
           </a>
           <a href="https://x.com/rachitk29" target="_blank" rel="noopener noreferrer">
-            <FaTwitter className="text-2xl text-[#bdbdbd] hover:text-blue-400 transition-colors duration-300" />
+            <FaTwitter className="text-2xl text-[#bdbdbd] hover:text-blue-400 transition-colors duration-100" />
           </a>
           {/* <a href="https://rachitk29.medium.com/" target="_blank" rel="noopener noreferrer">
             <FaMedium className="text-2xl text-[#bdbdbd] hover:text-blue-400 transition-colors duration-300" />
@@ -101,7 +101,7 @@ const Hero = () => {
                 <p className="text-sm text-gray-300">Grades - 8.0</p>
               </div>
             </div>
-            
+
             <div className="relative mb-8">
               <div className="absolute -left-[18px] top-1 w-4 h-4 rounded-full bg-gray-400 border-4 border-black"></div>
               <div className="ml-4 text-left">
@@ -110,7 +110,7 @@ const Hero = () => {
                 <p className="text-sm text-gray-300">Grades - 8.1</p>
               </div>
             </div>
-            
+
             <div className="relative">
               <div className="absolute -left-[18px] top-1 w-4 h-4 rounded-full bg-gray-400 border-4 border-black"></div>
               <div className="ml-4 text-left">

@@ -60,29 +60,31 @@ const Projects = () => (
           <div className="flex justify-between items-center px-6 pb-4 mt-2">
   {/* Code Button */}
   {p.links.repo && (
-    <a
-      href={p.links.repo}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex items-center gap-2 text-sm text-white border border-white/20 rounded-full px-4 py-2 transition-all duration-300 ease-in-out hover:border-white hover:shadow-[0_0_0px_0px_rgba(255,255,255,0.25)]"
-    >
-      <FaGithub className="text-lg" />
-      Code
-    </a>
-  )}
+  <a
+    href={p.links.repo}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-1 text-xs sm:text-sm text-white border border-white/20 rounded-full px-3 py-1.5 sm:px-4 sm:py-2 transition-all duration-300 ease-in-out hover:border-white hover:shadow-[0_0_10px_2px_rgba(255,255,255,0.25)]"
+  >
+    <FaGithub className="text-base sm:text-lg" />
+    Code
+  </a>
+)}
+
 
   {/* Live Demo Button */}
   {p.links.demo && (
-    <a
-      href={p.links.demo}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex items-center gap-2 text-sm text-white border border-white/20 rounded-full px-4 py-2 transition-all duration-300 ease-in-out hover:border-white hover:shadow-[0_0_px_0px_rgba(255,255,255,0.25)]"
-    >
-      <FaRegEye className="text-lg" />
-      Live Demo
-    </a>
-  )}
+  <a
+    href={p.links.demo}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-1 text-xs sm:text-sm text-white border border-white/20 rounded-full px-3 py-1.5 sm:px-4 sm:py-2 transition-all duration-300 ease-in-out hover:border-white hover:shadow-[0_0_10px_2px_rgba(255,255,255,0.25)]"
+  >
+    <FaRegEye className="text-base sm:text-lg" />
+    Live demo
+  </a>
+)}
+
 </div>
 
         </motion.div>

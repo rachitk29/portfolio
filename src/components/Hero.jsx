@@ -1,7 +1,6 @@
 // src/components/Hero.jsx
 import { motion } from "framer-motion";
 import profileImg from "../assets/profile.jpg";
-import evilProfile from "../assets/evilProfile.jpg";
 import { SiLeetcode } from "react-icons/si";
 import { FaGithub, FaLinkedin, FaTwitter, FaMedium } from "react-icons/fa";
 
@@ -17,18 +16,14 @@ const Hero = () => {
       {/* Avatar & Icons */}
       <div className="cursor-pointer border border-transparent transition-all rounded-lg p-4 w-64 h-auto flex flex-col items-center gap-6 mb-8 group">
         {/* Profile Section */}
-        <div className="relative w-52 h-52 rounded-md border-2 border-blue-500 shadow-md overflow-hidden">
-          <img
-            src={profileImg}
-            alt="Rachit"
-            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100 group-hover:opacity-0"
-          />
-          <img
-            src={evilProfile}
-            alt="Evil Rachit"
-            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 group-hover:opacity-100"
-          />
-        </div>
+        <div className="relative w-52 h-52 rounded-md border-2 border-blue-500 shadow-md overflow-hidden transition-shadow duration-300 hover:shadow-[0_0_4px_4px_rgba(255,255,255,0.25)] hover:border-white">
+  <img
+    src={profileImg}
+    alt="Rachit"
+    className="absolute inset-0 w-full h-full object-cover"
+  />
+</div>
+
 
         {/* Social Icons */}
         <div className="flex flex-wrap justify-center items-center gap-7">

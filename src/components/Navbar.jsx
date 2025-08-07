@@ -5,6 +5,7 @@ import { Menu, X } from "lucide-react";
 const TABS = [
   { label: "About", value: "about" },
   { label: "Projects", value: "projects" },
+  {label: "Phoryte", value: "phoryte"},
   { label: "Contact", value: "contact" },
 ];
 
@@ -16,7 +17,6 @@ const Navbar = ({ activeTab, onTabChange }) => {
     setMenuOpen(false); 
   };
 
-  
 
   return (
     <nav className="font-sans top-0 left-0 w-full z-50 px-4">
@@ -30,7 +30,7 @@ const Navbar = ({ activeTab, onTabChange }) => {
                 onClick={() => handleTabClick(value)}
                 className={`cursor-pointer capitalize ${
                   activeTab === value
-                    ? "text-blue-400 underline"
+                    ? "text-blue-400"
                     : "hover:text-blue-300"
                 }`}
               >

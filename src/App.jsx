@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
+import Phoryte from "./components/Phoryte";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Spinner from "./components/Spinner";
-import StarCanvas from "./components/StarCanvas"; // ✅ Add this
+import StarCanvas from "./components/StarCanvas";
 import { motion, AnimatePresence } from "framer-motion";
 import { Analytics } from "@vercel/analytics/react";
 import "./index.css";
@@ -29,6 +30,8 @@ function App() {
         return <Hero />;
       case "projects":
         return <Projects />;
+       case "phoryte":
+        return <Phoryte />
       case "contact":
         return <Contact />;
       default:

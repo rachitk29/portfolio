@@ -26,10 +26,15 @@ const Contact = () => {
   return (
     <motion.section
       id="contact"
-      className="font-sans pb-8 py-12 px-8 bg-black text-white flex flex-col items-center"
+      className="font-sans pb-8 py-12 px-8 bg-black text-white flex flex-col items-center select-none"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
+      onCopy={(e) => {
+      e.preventDefault();
+      alert("Copying is disabled on this section.");
+    }}
+    onContextMenu={(e) => e.preventDefault()}
     >
       <motion.h2 className="text-3xl font-semibold text-gray-400 mb-6">
         Contact Me

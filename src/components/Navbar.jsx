@@ -16,6 +16,8 @@ const Navbar = ({ activeTab, onTabChange }) => {
     setMenuOpen(false); 
   };
 
+  
+
   return (
     <nav className="font-sans top-0 left-0 w-full z-50 px-4">
       {/* for desktop */}

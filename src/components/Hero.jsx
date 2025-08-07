@@ -12,9 +12,15 @@ const Hero = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
+
+      onCopy={(e) => {
+      e.preventDefault();
+      alert("Copying is disabled on this section.");
+    }}
+    onContextMenu={(e) => e.preventDefault()}
     >
       {/* Avatar & Icons */}
-      <div className="cursor-pointer border border-transparent transition-all rounded-lg p-4 w-64 h-auto flex flex-col items-center gap-6 mb-8 group">
+      <div className="cursor-pointer border border-transparent transition-all rounded-lg p-4 w-64 h-auto flex flex-col items-center gap-6 mb-8 group select-none">
         {/* Profile Section */}
         <div className="relative w-52 h-52 rounded-md border-2 border-blue-500 shadow-md overflow-hidden transition-shadow duration-300 hover:shadow-[0_0_4px_4px_rgba(255,255,255,0.25)] hover:border-white">
           <img
@@ -46,7 +52,7 @@ const Hero = () => {
       </div>
 
       {/* About Text */}
-      <div className="w-full max-w-4xl mx-auto px-4">
+      <div className="w-full max-w-4xl mx-auto px-4 select-none">
         <motion.p
           className="text-base sm:text-lg leading-relaxed text-white px-2 sm:px-0 mt-2"
           initial={{ opacity: 0, y: 30 }}

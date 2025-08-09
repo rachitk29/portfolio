@@ -1,22 +1,17 @@
 // src/components/Hero.jsx
-import { motion } from "framer-motion";
 import profileImg from "../assets/profile.jpg";
 
 const Hero = () => {
   return (
-    <motion.section
+    <section
       id="home"
       className="min-h-screen flex flex-col justify-start items-center pt-24 text-white font-sans bg-transparent"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
       onCopy={(e) => {
         e.preventDefault();
         alert("Copying is disabled on this section.");
       }}
       onContextMenu={(e) => e.preventDefault()}
     >
-
       {/* Avatar centered */}
       <div className="flex flex-col items-center text-center mb-6">
         <div className="relative w-28 h-28 rounded-full border-2 border-gray-400 shadow-md overflow-hidden select-none cursor-pointer">
@@ -36,7 +31,6 @@ const Hero = () => {
         >
           @rachitk29
         </a>
-
       </div>
 
       {/* Content aligned from start */}
@@ -48,20 +42,12 @@ const Hero = () => {
           who loves tech and buildings stuffs, also i play cricket sometime i click photos and writing poems to justify me perspective towards life.
         </p>
         <p className="text-sm leading-relaxed text-white mt-2 mb-6 cursor-pointer relative z-10">
-          I am a programmer and constantly want to learn new skills. Building stuffs in MERN Stack. Enhancing my problem solving skills in DSA. I am a tech geek and always keep exploring different things related to Technology and Software.
+          I am a programmer passionate about learning new skills. I build projects using the MERN stack and continuously improve my problem-solving abilities through DSA. As a tech enthusiast, I constantly explore new trends and innovations in technology and software.
         </p>
 
-
-
         {/* Tech Stack */}
-        <motion.div
-          className="mt-6 sm:mt-10 w-full"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8 }}
-        >
-
-          <h2 className="text-xl font-semibold mb-4  text-center">Tech Stack</h2>
+        <div className="mt-4 sm:mt-8 w-full">
+          <h2 className="text-xl font-semibold mb-4 text-center">Tech Stack</h2>
           <div className="flex flex-wrap gap-2 text-xs text-gray-300 cursor-pointer">
             {[
               "HTML", "CSS", "JavaScript", "React", "Tailwind CSS",
@@ -78,10 +64,9 @@ const Hero = () => {
               </div>
             ))}
           </div>
-
-        </motion.div>
+        </div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

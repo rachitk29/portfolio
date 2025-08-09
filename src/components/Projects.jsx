@@ -26,7 +26,7 @@ const projects = [
 
 const Projects = () => (
   <>
-          <h2 className="text-xl font-semibold mb-8 text-center">Projects</h2>
+          <h2 className="text-xl font-semibold mb-8 text-center mt-2 sm:mt-2">Projects</h2>
     <div
       onContextMenu={(e) => e.preventDefault()}
       className="grid grid-cols-1 sm:grid-cols-2 gap-16 max-w-3xl mx-auto px-2 bg-light-mode-bg dark:bg-dark-mode-bg min-h-auto mb-20 mt-2 font-sans cursor-pointer select-none"

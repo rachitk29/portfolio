@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex flex-col justify-start items-center pt-24 text-white font-sans bg-transparent"
+      className="min-h-auto mb-20 flex flex-col justify-start items-center pt-24 text-white font-sans bg-transparent"
       onCopy={(e) => {
         e.preventDefault();
         alert("Copying is disabled on this section.");
@@ -47,7 +47,7 @@ const Hero = () => {
 
         {/* Tech Stack */}
         <div className="mt-4 sm:mt-8 w-full">
-          <h2 className="text-xl font-semibold mb-4 text-center">Tech Stack</h2>
+          <h2 className="text-xl font-semibold mb-6 text-center">Tech Stack</h2>
           <div className="flex flex-wrap gap-2 text-xs text-gray-300 cursor-pointer">
             {[
               "HTML", "CSS", "JavaScript", "React", "Tailwind CSS",

@@ -5,7 +5,7 @@ const projects = [
   {
     title: "karmly",
     description:
-      "Designed a responsive task management app using React, TailwindCSS, Clerk, and Framer Motion. Features include task creation, completion with animations, confetti effects, and a calm, minimal UI.",
+      "Designed a responsive task management app using React, TailwindCSS, Clerk, and Framer Motion. Features include task creation, completion with animations, confetti effects, minimal UI.",
     links: {
       repo: "https://github.com/rachitk29/fullStackToDo",
       demo: "https://karmly.vercel.app",
@@ -21,15 +21,6 @@ const projects = [
     },
   },
   {
-    title: "Weather Application",
-    description:
-      "Responsive React weather app that shows real-time temperature, humidity, and extended forecasts in a clean, user-friendly layout.",
-    links: {
-      repo: "https://github.com/rachitkatariya/weather-react-app",
-      demo: "https://weather-react-app-blush.vercel.app/",
-    },
-  },
-  {
     title: "ToDesktop",
     description:
       "Recreated a responsive ToDesktop UI using React and Tailwind CSS, featuring smooth custom animations and a polished, minimal interface.",
@@ -42,66 +33,65 @@ const projects = [
 
 const Projects = () => (
   <motion.section
-    id="projects"
-    onCopy={(e) => {
-      e.preventDefault();
-      alert("Copying is disabled on this section.");
-    }}
-    onContextMenu={(e) => e.preventDefault()}
-    className="pt-14 pb-28 px-6 bg-light-mode-bg dark:bg-dark-mode-bg min-h-screen font-sans cursor-pointer select-none"
-    initial="hidden"
-    whileInView="visible"
-    viewport={{ once: true }}
-  >
-    <h2 className="text-4xl font-bold text-center mb-10">Projects</h2>
+  id="projects"
+  onCopy={(e) => {
+    e.preventDefault();
+    alert("Copying is disabled on this section.");
+  }}
+  onContextMenu={(e) => e.preventDefault()}
+  className="-mt-1 sm:-mt-2 pb-2 px-2 bg-light-mode-bg dark:bg-dark-mode-bg min-h-screen font-sans cursor-pointer select-none"
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+>
+  <h2 className="text-xl font-semibold mb-4 text-center sm:w-lg">Projects</h2>
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
-      {projects.map((p, i) => (
-        <motion.div
-          key={i}
-          className="relative rounded-2xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-md shadow-md hover:shadow-[0_0_10px_2px_rgba(255,255,255,0.2)] transition-all duration-300 flex flex-col justify-between cursor-pointer"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 * i }}
-        >
-          {/* Card Content */}
-          <div className="p-6 space-y-3">
-            <h3 className="text-2xl font-semibold text-white capitalize">{p.title}</h3>
-            <p className="text-sm text-gray-300 leading-relaxed">{p.description}</p>
-          </div>
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto px-2">
+    {projects.map((p, i) => (
+      <motion.div
+  key={i}
+  className="relative rounded-xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-md shadow-md hover:shadow-[0_0_10px_2px_rgba(255,255,255,0.2)] transition-all duration-300 flex flex-col justify-between max-w-sm w-full mx-auto"
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.1 * i }}
+>
+  {/* Card Content */}
+  <div className="p-4 space-y-2 pb-12">
+    <h3 className="text-lg font-semibold text-white capitalize">{p.title}</h3>
+    <p className="text-sm leading-relaxed text-white mt-2 cursor-pointer relative z-10">
+      {p.description}
+    </p>
+  </div>
 
-          {/* Buttons Row */}
-          <div className="flex justify-between items-center px-6 pb-4 mt-2">
-            {/* Code Button */}
-            {p.links.repo && (
-              <a
-                href={p.links.repo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-1 text-xs sm:text-sm text-white border border-white/20 rounded-full px-3 py-1.5 sm:px-4 sm:py-2 transition-all duration-100 ease-in-out hover:border-white hover:shadow-[0_0_10px_2px_rgba(255,255,255,0.25)]"
-              >
-                <FaGithub className="text-base sm:text-lg" />
-                Code
-              </a>
-            )}
+  {/* Buttons Row - bottom left */}
+  <div className="absolute bottom-2 left-2 flex gap-2">
+    {p.links.repo && (
+      <a
+        href={p.links.repo}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-1 text-sm text-white border border-white/20 rounded-full px-2 py-1 hover:border-white hover:shadow-[0_0_8px_1px_rgba(255,255,255,0.25)] transition"
+      >
+        <FaGithub />
+      </a>
+    )}
+    {p.links.demo && (
+      <a
+        href={p.links.demo}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-1 text-xs text-white border border-white/20 rounded-full px-2 py-1 hover:border-white hover:shadow-[0_0_8px_1px_rgba(255,255,255,0.25)] transition"
+      >
+        <FaRegEye />
+      </a>
+    )}
+  </div>
+</motion.div>
 
-            {/* Live Demo Button */}
-            {p.links.demo && (
-              <a
-                href={p.links.demo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-1 text-xs sm:text-sm text-white border border-white/20 rounded-full px-3 py-1.5 sm:px-4 sm:py-2 transition-all duration-100 ease-in-out hover:border-white hover:shadow-[0_0_10px_2px_rgba(255,255,255,0.25)]"
-              >
-                <FaRegEye className="text-base sm:text-lg" />
-                Live demo
-              </a>
-            )}
-          </div>
-        </motion.div>
-      ))}
-    </div>
-  </motion.section>
+    ))}
+  </div>
+</motion.section>
+
 );
 
 export default Projects;

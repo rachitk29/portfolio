@@ -1,28 +1,25 @@
 // src/components/Hero.jsx
 import { motion } from "framer-motion";
 import profileImg from "../assets/profile.jpg";
-import { SiLeetcode } from "react-icons/si";
-import { FaGithub, FaLinkedin, FaTwitter, FaMedium } from "react-icons/fa";
 
 const Hero = () => {
   return (
     <motion.section
       id="home"
-      className=" sm:pt pt-16 pb-5 px-6 flex flex-col items-center justify-center text-center text-white min-h-screen font-sans bg-transparent"
+      className="min-h-screen flex flex-col justify-start items-center pt-24 text-white font-sans bg-transparent"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-
       onCopy={(e) => {
-      e.preventDefault();
-      alert("Copying is disabled on this section.");
-    }}
-    onContextMenu={(e) => e.preventDefault()}
+        e.preventDefault();
+        alert("Copying is disabled on this section.");
+      }}
+      onContextMenu={(e) => e.preventDefault()}
     >
-      {/* Avatar & Icons */}
-      <div className="cursor-pointer border border-transparent transition-all rounded-lg p-4 w-64 h-auto flex flex-col items-center gap-6 mb-8 group select-none">
-        {/* Profile Section */}
-        <div className="relative w-52 h-52 rounded-md border-2 border-blue-500 shadow-md overflow-hidden transition-shadow duration-300 hover:shadow-[0_0_4px_4px_rgba(255,255,255,0.25)] hover:border-white">
+
+      {/* Avatar centered */}
+      <div className="flex flex-col items-center text-center mb-6">
+        <div className="relative w-28 h-28 rounded-full border-2 border-gray-400 shadow-md overflow-hidden select-none cursor-pointer">
           <img
             src={profileImg}
             alt="Rachit"
@@ -30,49 +27,42 @@ const Hero = () => {
           />
         </div>
 
+        {/* Link Below Image */}
+        <a
+          href="https://twitter.com/rachitk29"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white text-sm font-bold mt-3 cursor-pointer relative z-10"
+        >
+          @rachitk29
+        </a>
 
-        {/* Social Icons */}
-        <div className="flex flex-wrap justify-center items-center gap-7">
-          <a href="https://github.com/rachitk29" target="_blank" rel="noopener noreferrer">
-            <FaGithub className="text-2xl text-[#bdbdbd] hover:text-red-400 transition-colors duration-100" />
-          </a>
-          <a href="https://leetcode.com/rachitk29" target="_blank" rel="noopener noreferrer">
-            <SiLeetcode className="text-2xl text-[#bdbdbd] hover:text-amber-400 transition-colors duration-100" />
-          </a>
-          <a href="https://www.linkedin.com/in/rachitk29/" target="_blank" rel="noopener noreferrer">
-            <FaLinkedin className="text-2xl text-[#bdbdbd] hover:text-blue-400 transition-colors duration-100" />
-          </a>
-          <a href="https://x.com/rachitk29" target="_blank" rel="noopener noreferrer">
-            <FaTwitter className="text-2xl text-[#bdbdbd] hover:text-blue-400 transition-colors duration-100" />
-          </a>
-          {/* <a href="https://rachitk29.medium.com/" target="_blank" rel="noopener noreferrer">
-            <FaMedium className="text-2xl text-[#bdbdbd] hover:text-blue-400 transition-colors duration-300" />
-          </a> */}
-        </div>
       </div>
 
-      {/* About Text */}
-      <div className="w-full max-w-4xl mx-auto px-4 select-none">
-        <motion.p
-          className="text-base sm:text-lg leading-relaxed text-white px-2 sm:px-0 mt-2"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 1 }}
-          dangerouslySetInnerHTML={{
-            __html: `Passionate programmer focused on MERN stack development and improving DSA skills.
-            <br>Tech enthusiast constantly exploring new tools, trends, and technologies in software development.`,
-          }}
-        />
+      {/* Content aligned from start */}
+      <div className="flex flex-col items-start max-w-2xl px-4 text-left">
+        {/* About Text */}
+        <p className="text-sm leading-relaxed text-white mt-2 mb-6 cursor-pointer relative z-10">
+          hey i'm
+          <span className="text-blue-400 font-medium"> rachit katariya </span>
+          who loves tech and buildings stuffs, also i play cricket sometime i click photos and writing poems to justify me perspective towards life.
+        </p>
+        <p className="text-sm leading-relaxed text-white mt-2 mb-6 cursor-pointer relative z-10">
+          I am a programmer and constantly want to learn new skills. Building stuffs in MERN Stack. Enhancing my problem solving skills in DSA. I am a tech geek and always keep exploring different things related to Technology and Software.
+        </p>
+
+
 
         {/* Tech Stack */}
         <motion.div
-          className="mt-20 text-left"
+          className="mt-6 sm:mt-10 w-full"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8 }}
         >
-          <h2 className="text-xl font-semibold mb-6 text-center">Tech Stack</h2>
-          <div className=" cursor-pointer grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 text-sm text-gray-300">
+
+          <h2 className="text-xl font-semibold mb-4  text-center">Tech Stack</h2>
+          <div className="flex flex-wrap gap-2 text-xs text-gray-300 cursor-pointer">
             {[
               "HTML", "CSS", "JavaScript", "React", "Tailwind CSS",
               "Node.js", "Express", "MongoDB", "C++", "Java",
@@ -80,66 +70,15 @@ const Hero = () => {
             ].map((tech) => (
               <div
                 key={tech}
-                className="bg-black/30 px-4 py-2 rounded-lg text-center shadow-md border border-gray-700 hover:bg-black/50 transition hover:pop-wiggle"
+                className="bg-black/30 px-3 py-1 rounded-md border border-gray-700 
+                 hover:bg-black/50 hover:border-blue-400 
+                 transition duration-200 ease-in-out"
               >
                 {tech}
               </div>
             ))}
           </div>
-        </motion.div>
 
-        {/* Education */}
-        <motion.div
-          className="mt-20"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.9 }}
-        >
-          <h2 className="text-xl font-semibold mb-10 text-center">Education</h2>
-
-          <div className="relative border-l-2 border-gray-600 pl-10 ml-4">
-            <div className="mb-8 relative">
-              <div className="absolute -left-[18px] top-1 w-4 h-4 rounded-full bg-gray-400 border-4 border-black"></div>
-              <div className="ml-4 text-left">
-                <h3 className="text-lg font-bold mb-1">BCA (2022 - 25)</h3>
-                <p className="text-sm text-gray-300 mb-1">CCS University</p>
-                <p className="text-sm text-gray-300 mb-1"> (Former Meerut University)</p>
-                <p className="text-sm text-gray-300">Grades - 8.0</p>
-              </div>
-            </div>
-
-            <div className="relative mb-8">
-              <div className="absolute -left-[18px] top-1 w-4 h-4 rounded-full bg-gray-400 border-4 border-black"></div>
-              <div className="ml-4 text-left">
-                <h3 className="text-lg font-bold mb-1">12th (2020 - 22)</h3>
-                <p className="text-sm text-gray-300 mb-1">MPSIC Hardoi</p>
-                <p className="text-sm text-gray-300">Grades - 8.1</p>
-              </div>
-            </div>
-
-            <div className="relative">
-              <div className="absolute -left-[18px] top-1 w-4 h-4 rounded-full bg-gray-400 border-4 border-black"></div>
-              <div className="ml-4 text-left">
-                <h3 className="text-lg font-bold mb-1">10th (2018 - 20)</h3>
-                <p className="text-sm text-gray-300 mb-1">SPMIC Meerut </p>
-                <p className="text-sm text-gray-300">Grades - 8.2</p>
-              </div>
-            </div>
-
-          </div>
-        </motion.div>
-
-        {/* Experience */}
-        <motion.div
-          className="mt-20"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1 }}
-        >
-          <h2 className="text-sm font-semibold mb-4 text-center">work in progress !</h2>
-          <div className="space-y-8 max-w-3xl mx-auto text-left text-gray-300">
-            {/* <p className="text-sm font-semibold mb-4 text-center">will update soon ⏳</p> */}
-          </div>
         </motion.div>
       </div>
     </motion.section>

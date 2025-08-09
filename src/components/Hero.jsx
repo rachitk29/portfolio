@@ -37,12 +37,12 @@ const Hero = () => {
       <div className="flex flex-col items-start max-w-2xl px-4 text-left">
         {/* About Text */}
         <p className="text-sm leading-relaxed text-white mt-2 mb-6 cursor-pointer relative z-10">
-          hey i'm
+          hey, I’m
           <span className="text-blue-400 font-medium"> rachit katariya </span>
-          who loves tech and buildings stuffs, also i play cricket sometime i click photos and writing poems to justify me perspective towards life.
+          a programmer passionate about learning and building projects with the MERN stack. I continuously improve my problem-solving skills through DSA and stay updated on the latest tech trends.
         </p>
         <p className="text-sm leading-relaxed text-white mt-2 mb-6 cursor-pointer relative z-10">
-          I am a programmer passionate about learning new skills. I build projects using the MERN stack and continuously improve my problem-solving abilities through DSA. As a tech enthusiast, I constantly explore new trends and innovations in technology and software.
+          Beyond my love for cricket, I find joy in capturing fleeting moments through the lens of my camera and crafting poetry that reflects my inner thoughts and emotions. These creative pursuits help me explore and communicate my unique worldview, offering a meaningful way to connect with both myself and the world around me.
         </p>
 
         {/* Tech Stack */}

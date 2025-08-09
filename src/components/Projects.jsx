@@ -26,7 +26,10 @@ const projects = [
 
 const Projects = () => (
   <>
-          <h2 className="text-xl font-semibold mb-8 text-center mt-2 sm:mt-2">Projects</h2>
+  
+ <div className="mt-4 sm:mt-8 w-full font-sans">
+          <h2 className="text-xl font-semibold mb-6 text-center">Tech Stack</h2>
+  </div>
     <div
       onContextMenu={(e) => e.preventDefault()}
       className="grid grid-cols-1 sm:grid-cols-2 gap-16 max-w-3xl mx-auto px-2 bg-light-mode-bg dark:bg-dark-mode-bg min-h-auto mb-20 mt-2 font-sans cursor-pointer select-none"
@@ -61,7 +64,7 @@ const Projects = () => (
                 target="_blank"
                 rel="noopener noreferrer"
               >
-<FiExternalLink />
+                <FiExternalLink />
               </a>
             )}
           </div>

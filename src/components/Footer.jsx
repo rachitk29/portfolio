@@ -1,8 +1,9 @@
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
+import { SiLeetcode } from "react-icons/si";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-[#bdbdbd] text-center font-sans py-8">
+    <footer className="bg-black text-[#bdbdbd] text-center font-sans py-6 mb-8">
       <h2 className="text-xl font-semibold mb-4 text-center">Connect with me</h2>
 
 
@@ -28,6 +29,16 @@ const Footer = () => {
           <FaLinkedin />
         </a>
 
+          <a
+          href="https://leetcode.com/rachitk29"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+          className="text-[#bdbdbd] hover:text-red-400 transition-colors relative z-10"
+        >
+          <SiLeetcode />
+        </a>
+
         <a
           href="https://x.com/rachitk29"
           target="_blank"
@@ -41,7 +52,7 @@ const Footer = () => {
         <a
           href="mailto:rachitkatariya1@gmail.com"
           aria-label="Email"
-          className="text-[#bdbdbd] hover:text-green-400 transition-colors relative z-10"
+          className="text-[#bdbdbd] hover:text-red-400 transition-colors relative z-10"
           rel="noopener noreferrer"
         >
           <FaEnvelope />

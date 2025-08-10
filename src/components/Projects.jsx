@@ -28,7 +28,7 @@ const Projects = () => (
   <>
   
  <div className="mt-4 sm:mt-8 w-full font-sans">
-          <h2 className="text-xl font-semibold mb-6 text-center">Tech Stack</h2>
+          <h2 className="text-xl font-semibold mb-6 text-center">Projects</h2>
   </div>
     <div
       onContextMenu={(e) => e.preventDefault()}

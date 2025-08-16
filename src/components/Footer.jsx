@@ -61,10 +61,10 @@ const Footer = () => {
       </div>
 
       {/* Text Section */}
-      <p className="text-sm">&copy; 2025 All rights reserved</p>
+      <p className="text-sm">&copy; {new Date().getFullYear()} All rights reserved</p>
       <p className="text-sm pt-2">
         Made with <span className="text-red-500">❤️</span> by{' '}
-        <span className="text-blue-400 font-medium">Rachit </span>
+        <span className="text-blue-400 font-medium">rachitk </span>
       </p>
     </footer>
   );

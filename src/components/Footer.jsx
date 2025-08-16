@@ -4,7 +4,7 @@ import { SiLeetcode } from "react-icons/si";
 const Footer = () => {
   return (
     <footer className="bg-black text-[#bdbdbd] text-center font-sans py-6 mb-8">
-      <h2 className="text-xl font-semibold mb-4 text-center">Connect with me</h2>
+      <h2 className="text-xl font-semibold mb-4 text-center">connect with me</h2>
 
 
       {/* Social Icons */}

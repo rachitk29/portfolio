@@ -5,9 +5,18 @@ import { FiExternalLink } from "react-icons/fi";
 
 const projects = [
   {
+    title: "blogappryt",
+    description:
+      "Built a modern blog platform using Appwrite, supporting login/signup, secure authentication, image uploads, and full CRUD functionality for posts.",
+    links: {
+      repo: "https://github.com/rachitk29/blogappryt",
+      demo: "https://blogappryt.vercel.app",
+    },
+  },
+  {
     title: "karmly",
     description:
-      "Designed a responsive task management app using React, TailwindCSS and Clerk. Features include task creation, completion with animations, confetti effects, minimal UI.",
+      "Designed a responsive task management app using React, TailwindCSS and Clerk. Features include task creation, completion with animations, confetti fx, minimal UI.",
     links: {
       repo: "https://github.com/rachitk29/fullStackToDo",
       demo: "https://karmly.vercel.app",
@@ -26,14 +35,17 @@ const projects = [
 
 const Projects = () => (
   <>
-  
- <div className="mt-4 sm:mt-8 w-full font-sans">
-          <h2 className="text-xl font-semibold mb-6 text-center">Projects</h2>
-  </div>
+
+    <div className="mt-4 sm:mt-8 w-full font-sans">
+      <h2 className="text-xl font-semibold mb-6 text-center">Projects</h2>
+    </div>
     <div
       onContextMenu={(e) => e.preventDefault()}
-      className="grid grid-cols-1 sm:grid-cols-2 gap-16 max-w-3xl mx-auto px-2 bg-light-mode-bg dark:bg-dark-mode-bg min-h-auto mb-20 mt-2 font-sans cursor-pointer select-none"
+      className="grid grid-cols-1 sm:grid-cols-2 gap-16 max-w-3xl mx-auto px-4 sm:px-2 
+             bg-light-mode-bg dark:bg-dark-mode-bg min-h-auto mb-20 mt-2 font-sans 
+             cursor-pointer select-none sm:mb-18"
     >
+
       {projects.map((p, i) => (
         <div
           key={i}
@@ -48,14 +60,16 @@ const Projects = () => (
           </div>
 
           {/* Buttons Row - bottom left */}
-          <div className="absolute bottom-2 left-2 flex gap-2">
+          <div className="absolute bottom-2 left-4 flex gap-3">
             {p.links.repo && (
               <a
                 href={p.links.repo}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="flex items-center gap-1.5 flex items-center gap-1.5 text-white/80 hover:text-white transition-colors duration-200
+                 hover:scale-110 transform"
               >
-                <FaGithub />
+                <FaGithub size={18} />
               </a>
             )}
             {p.links.demo && (
@@ -63,11 +77,14 @@ const Projects = () => (
                 href={p.links.demo}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="flex items-center gap-1.5 text-white/80 hover:text-white transition-colors duration-200
+                 hover:scale-110 transform"
               >
-                <FiExternalLink />
+                <FiExternalLink size={18} />
               </a>
             )}
           </div>
+
         </div>
       ))}
     </div>

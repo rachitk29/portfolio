@@ -39,15 +39,15 @@ const Hero = () => {
         <p className="text-sm leading-relaxed text-white mt-2 mb-6 cursor-pointer relative z-10">
           hey, I’m
           <span className="text-blue-400 font-medium"> rachit katariya </span>
-          a programmer passionate about learning and building projects with the MERN stack. I continuously improve my problem-solving skills through DSA and stay updated on the latest tech trends.
+          a programmer passionate about learning and building projects with the MERN stack. I continuously improve my problem solving skills through DSA and stay updated on the latest tech trends.
         </p>
         <p className="text-sm leading-relaxed text-white mt-2 mb-6 cursor-pointer relative z-10">
-          Beyond my love for cricket, I find joy in capturing fleeting moments through the lens of my camera and crafting poetry that reflects my inner thoughts and emotions. These creative pursuits help me explore and communicate my unique worldview, offering a meaningful way to connect with both myself and the world around me.
+          I write code that builds, and I love capturing moments through my lens each frame of pixels holding unspoken stories of the world, which I weave into words and shape into poems.
         </p>
 
         {/* Tech Stack */}
-        <div className="mt-4 sm:mt-8 w-full">
-          <h2 className="text-xl font-semibold mb-6 text-center">Tech Stack</h2>
+        <div className="mt-2 sm:mt-8 w-full">
+          <h2 className="text-xl font-semibold mb-2 text-center">Tech Stack</h2>
           <div className="flex flex-wrap gap-2 text-xs text-gray-300 cursor-pointer">
             {[
               "HTML", "CSS", "JavaScript", "React", "Tailwind CSS",

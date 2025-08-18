@@ -1,4 +1,5 @@
 import React from "react";
+import Container from "./Container";
 import { FaEnvelope, FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
 
 function Social() {
@@ -26,9 +27,10 @@ function Social() {
   ];
 
   return (
-    <div className="max-w-2xl mx-auto px-4 sm:px-8 pt-4 text-left">
+    <Container>
+<div className="pt-2 text-left">
       {/* Top border with text */}
-      <p className="font-figtree text-sm text-gray-400 mb-4 border-t border-[#27272a] pt-2">
+      <p className="font-figtree text-sm text-gray-400 mb-4 border-t border-[#27272a] pt-4">
         Where to find me (<span className="text-white">digitally</span>) if you wish to
       </p>
 
@@ -48,6 +50,8 @@ function Social() {
         ))}
       </div>
     </div>
+    </Container>
+    
   );
 }
 

@@ -7,12 +7,12 @@ export default {
       colors: {
         background: "#0f141f",
         surface: "#1a202c",
-        text: "#e0e0e0",
         muted: "#8a8f99",
         accent: "#ffffff",
       },
       fontFamily: {
         sans: ["Poppins", "sans-serif"],
+      figtree: ["Figtree", "sans-serif"],
       },
     },
   },

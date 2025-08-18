@@ -5,66 +5,51 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-auto mb-20 flex flex-col justify-start items-center pt-24 text-white font-sans bg-transparent"
-      onCopy={(e) => {
-        e.preventDefault();
-        alert("Copying is disabled on this section.");
-      }}
-      onContextMenu={(e) => e.preventDefault()}
+      className="min-h-auto mb-2 flex flex-col justify-start items-center pt-20 text-gray-400 font-sans bg-transparent"
     >
-      {/* Avatar centered */}
-      <div className="flex flex-col items-center text-center mb-6">
-        <div className="relative w-28 h-28 rounded-full border-2 border-gray-400 shadow-md overflow-hidden select-none cursor-pointer">
+      <div className="items-start flex flex-col text-center mb-6">
+        {/* Clickable Profile Image */}
+        <a
+          href="https://github.com/rachitk29"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="relative w-20 h-20 rounded-full border-2 border-gray-800 shadow-md overflow-hidden select-none cursor-pointer"
+        >
           <img
             src={profileImg}
             alt="Rachit"
             className="absolute inset-0 w-full h-full object-cover"
           />
-        </div>
+        </a>
 
-        {/* Link Below Image */}
+        {/* Clickable Username */}
         <a
           href="https://twitter.com/rachitk29"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white text-sm font-bold mt-3 cursor-pointer relative z-10"
+          className="text-sm font-bold mt-3 cursor-pointer relative z-10"
         >
           @rachitk29
         </a>
       </div>
 
-      {/* Content aligned from start */}
-      <div className="flex flex-col items-start max-w-2xl px-4 text-left">
-        {/* About Text */}
-        <p className="text-sm leading-relaxed text-white mt-2 mb-6 cursor-pointer relative z-10">
-          hey, I’m
-          <span className="text-blue-400 font-medium"> rachit katariya </span>
-          a programmer passionate about learning and building projects with the MERN stack. I continuously improve my problem solving skills through DSA and stay updated on the latest tech trends.
-        </p>
-        <p className="text-sm leading-relaxed text-white mt-2 mb-6 cursor-pointer relative z-10">
-          I write code that builds, and I love capturing moments through my lens each frame of pixels holding unspoken stories of the world, which I weave into words and shape into poems.
+      <div className="flex flex-col items-start max-w-2xl px-6 text-left">
+        <p className="font-figtree text-sm leading-relaxed text-gray-400 mt-2 mb-3">
+          I'm <span className="text-white">Rachit</span>, a 20yo developer living in Meerut, India.
+          I love to code and make (<span className="text-white">break</span>) things.
         </p>
 
-        {/* Tech Stack */}
-        <div className="mt-2 sm:mt-8 w-full">
-          <h2 className="text-xl font-semibold mb-2 text-center">Tech Stack</h2>
-          <div className="flex flex-wrap gap-2 text-xs text-gray-300 cursor-pointer">
-            {[
-              "HTML", "CSS", "JavaScript", "React", "Tailwind CSS",
-              "Node.js", "Express", "MongoDB", "C++", "Java",
-              "Git & GitHub", "Figma",
-            ].map((tech) => (
-              <div
-                key={tech}
-                className="bg-black/30 px-3 py-1 rounded-md border border-gray-700 
-                 hover:bg-black/50 hover:border-blue-400 
-                 transition duration-200 ease-in-out"
-              >
-                {tech}
-              </div>
-            ))}
-          </div>
-        </div>
+        <p className="text-sm text-gray-400 mb-3">
+          I love both <span className="text-white">Development</span> & <span className="text-white">Design</span>.
+          So yes, I can make things look good and actually work.
+          When I'm <span className="text-white">not busy</span>, you'll usually find me watching movies & webshows, listening music, playing cricket, or just catching up on some much-needed sleep.
+        </p>
+
+        <p className="text-sm leading-relaxed text-gray-400 mb-6">
+          Let's be real: I'm always chasing new things to learn, new problems to solve,
+          and if I'm lucky maybe one day my parents will finally understand
+          <span className="text-white"> what I actually do!</span>
+        </p>
       </div>
     </section>
   );

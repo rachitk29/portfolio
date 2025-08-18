@@ -14,7 +14,7 @@
 
 body {
   @apply font-sans;
-  background-color: #212121;
+  background-color: #0a0a0a;
   color: #bdbdbd;
 }
 /* Animation for Icons */
@@ -47,7 +47,7 @@ body {
 }
 
 .text-white {
-  color: #bdbdbd;
+  color: white;
 }
 
 .text-gray {

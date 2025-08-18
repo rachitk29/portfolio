@@ -1,4 +1,5 @@
 import React from "react";
+import Container from "./Container"; 
 import js from "../assets/skills/javascript.svg";
 import ts from "../assets/skills/typescript.svg";
 import c from "../assets/skills/c.svg";
@@ -14,7 +15,6 @@ import vscode from "../assets/skills/vscode.svg";
 import vercel from "../assets/skills/vercel.svg";
 import postman from "../assets/skills/postman.svg";
 import mysql from "../assets/skills/mysql.svg";
-
 
 const icons = {
     JavaScript: js,
@@ -55,9 +55,9 @@ function Skills() {
     ];
 
     return (
-        <section className="py-4">
-            <div className="max-w-2xl mx-auto px-4 sm:px-8">
-                <h1 className="font-doto font-bold tracking-wider text-[26px] leading-8 text-[#fafafa] border-t border-[#27272a] pt-2">
+        <Container>
+            <section className="py-4">
+                <h1 className="font-doto font-bold tracking-wider text-[26px] leading-8 text-[#fafafa] border-t border-[#27272a] pt-3">
                     Skills{" "}
                     <span className="font-jetbrains-mono text-sm text-[#404040] font-normal tracking-wider">
                         Which I use/know
@@ -71,7 +71,7 @@ function Skills() {
 
                 {/* Skill Sections */}
                 {skills.map((section, index) => (
-                    <div key={index} className="mb-6">
+                    <div key={index} className="mb-4">
                         <h3 className="text-sm font-figtree font-medium text-gray-400 mb-4 uppercase tracking-wider">
                             {section.title}
                         </h3>
@@ -93,10 +93,9 @@ function Skills() {
                             ))}
                         </div>
                     </div>
-
                 ))}
-            </div>
-        </section>
+            </section>
+        </Container>
     );
 }
 

@@ -17,15 +17,25 @@ const BlogList = () => (
 
       {blogs.map((blog, idx) => (
         <a
-          key={idx}
-          href={blog.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex justify-between items-center w-full border border-white/10 rounded-md px-4 py-3 hover:border-white/30 transition-colors duration-200"
-        >
-          <span className="text-gray-400 text-sm">{blog.title}</span>
-          <FiExternalLink className="text-gray-400" size={18} />
-        </a>
+  key={idx}
+  href={blog.link}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="group flex items-center justify-between w-full gap-3 sm:gap-4 
+             px-4 py-3 sm:px-6 sm:py-4
+             border border-white/10 rounded-lg 
+             bg-transparent
+             text-gray-400 text-sm
+             cursor-pointer
+             transform-gpu transition-all duration-200
+             hover:scale-[1.005] hover:border-white/50 hover:bg-[#111111]
+             no-underline
+             focus:outline-none focus:ring-2 focus:ring-[#1e1e1e]"
+>
+  <span>{blog.title}</span>
+  <FiExternalLink className="text-gray-400" size={18} />
+</a>
+
       ))}
     </div>
   </Container>

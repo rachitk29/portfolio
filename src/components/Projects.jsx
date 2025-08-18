@@ -35,22 +35,34 @@ const projects = [
 
 const Projects = () => (
   <Container>
-    {/* Top border with heading */}
-    <p className="text-sm font-figtree font-medium text-gray-400 mb-4 uppercase tracking-wider border-t border-[#27272a] pt-2">
+    <div className="pt-2 text-left">
+      <p className="text-sm font-figtree font-medium text-gray-400 mb-4 mt-2 uppercase tracking-wider border-t border-[#27272a] pt-4">
       Projects
     </p>
+</div>
+    {/* Top border with heading */}
+    
 
     {/* Project cards */}
     <div className="space-y-6 mb-8">
       {projects.map((p, i) => (
         <div
           key={i}
-          className="relative rounded-xl overflow-hidden border border-white/10 bg-0a0a0a backdrop-blur-md shadow-md transition-all duration-300 flex flex-col justify-between p-6 w-full hover:border-white"
+          className="group flex flex-col justify-between w-full gap-3 sm:gap-4 
+                     px-6 py-4 sm:px-6 sm:py-4
+                     border border-white/10 rounded-xl
+                     bg-transparent text-gray-400 text-sm
+                     cursor-pointer
+                     transform-gpu transition-all duration-200
+                     hover:scale-[1.005] hover:border-white/50 hover:bg-[#111111]
+                     shadow-md
+                     no-underline
+                     focus:outline-none focus:ring-2 focus:ring-[#1e1e1e]"
         >
           {/* Card Content */}
           <div className="space-y-2">
             <h3 className="text-sm font-sm text-gray-400 capitalize">{p.title}</h3>
-            <p className="text-sm leading-relaxed text-gray-400 mt-2 mb-6 cursor-pointer relative z-10">
+            <p className="text-sm leading-relaxed text-gray-400 mt-2 mb-3 relative z-10">
               {p.description}
             </p>
           </div>

@@ -1,14 +1,43 @@
 // src/components/Hero.jsx
+import React, { useState, useEffect } from "react";
 import profileImg from "../assets/profile.jpg";
 import Container from "./Container";
 
 const Hero = () => {
+  const [time, setTime] = useState("");
+
+  const getIndiaTime = () => {
+    const now = new Date();
+    const istOffset = 5.5 * 60 * 60 * 1000; 
+    const istTime = new Date(utc + istOffset);
+
+    const hours = istTime.getHours().toString().padStart(2, "0");
+    const minutes = istTime.getMinutes().toString().padStart(2, "0");
+    const seconds = istTime.getSeconds().toString().padStart(2, "0");
+
+    return `${hours}:${minutes}:${seconds}`;
+  };
+
+  useEffect(() => {
+    setTime(getIndiaTime()); 
+    const interval = setInterval(() => {
+      setTime(getIndiaTime());
+    }, 1000); // update every second
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section
       id="home"
       className="mb-2 flex flex-col justify-start items-start pt-20 text-gray-400 font-sans bg-transparent"
     >
       <Container>
+        <div className="flex justify-between items-center text-gray-400 text-sm mb-4 w-full">
+          <span>IN {time}</span>
+          <span>📍Meerut(UP),India</span>
+        </div>
+
         {/* Profile Image & Username */}
         <div className="flex flex-col items-start text-left mb-2">
           <a

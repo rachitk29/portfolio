@@ -7,7 +7,7 @@ function Social() {
     {
       name: "Email Me",
       icon: <FaEnvelope />,
-      link: "rachitkumar2953@gmail.com",
+      link: "mailto:rachitkumar2953@gmail.com",
     },
     {
       name: "Twitter",

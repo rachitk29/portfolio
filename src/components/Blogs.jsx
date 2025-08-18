@@ -6,6 +6,10 @@ const blogs = [
     title: "Dangerous site on Github Pages",
     link: "https://medium.com/@rachitk29/dangerous-site-on-git-pages-d81d119fe796",
   },
+  {
+    title: "Discrimination in the 21st Century: A Harsh Truth We Still Ignore",
+    link: "https://rachitk29.medium.com/discrimination-in-the-21st-century-a-harsh-truth-we-still-ignore-8730c007de0a",
+  },
 ];
 
 const BlogList = () => (

@@ -8,6 +8,7 @@ const Hero = () => {
 
   const getIndiaTime = () => {
     const now = new Date();
+    const utc = now.getTime() + now.getTimezoneOffset() * 60000; 
     const istOffset = 5.5 * 60 * 60 * 1000; 
     const istTime = new Date(utc + istOffset);
 
@@ -22,9 +23,9 @@ const Hero = () => {
     setTime(getIndiaTime()); 
     const interval = setInterval(() => {
       setTime(getIndiaTime());
-    }, 1000); // update every second
+    }, 1000); 
 
-    return () => clearInterval(interval);
+    return () => clearInterval(interval); 
   }, []);
 
   return (
@@ -33,12 +34,11 @@ const Hero = () => {
       className="mb-2 flex flex-col justify-start items-start pt-20 text-gray-400 font-sans bg-transparent"
     >
       <Container>
-        <div className="flex justify-between items-center text-gray-400 text-sm mb-4 w-full">
+        <div className="flex justify-between items-center text-gray-400 text-sm px-4 py-2 mb-4 w-full">
           <span>IN {time}</span>
-          <span>📍Meerut(UP),India</span>
+          <span>📍 Mumbai, India</span>
         </div>
 
-        {/* Profile Image & Username */}
         <div className="flex flex-col items-start text-left mb-2">
           <a
             href="https://github.com/rachitk29"

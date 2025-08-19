@@ -1,5 +1,6 @@
 import React from "react";
 import Container from "./Container";
+import { Link } from "react-router-dom"; 
 import { FaEnvelope, FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
 
 function Social() {
@@ -28,30 +29,45 @@ function Social() {
 
   return (
     <Container>
-<div className="pt-2 text-left">
-      {/* Top border with text */}
-      <p className="font-figtree text-sm text-gray-400 mb-4 border-t border-[#27272a] pt-4">
-        Where to find me (<span className="text-white">digitally</span>) if you wish to
-      </p>
+      <div className="pt-2 text-left">
+        {/* Top border with text */}
+        <p className="font-figtree text-sm text-gray-400 mb-4 border-t border-[#27272a] pt-4">
+          Where to find me (<span className="text-white">digitally</span>) if you wish to
+        </p>
 
-      {/* Social Buttons */}
-      <div className="flex flex-wrap gap-3 text-gray-400">
-        {socials.map((social, idx) => (
-          <a
-            key={idx}
-            href={social.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-[#18181b] border border-[#27272a] rounded-lg px-3 py-1 text-gray-400 text-sm  shadow hover:border-[#f3576c] transition"
-          >
-            {social.icon}
-            {social.name}
-          </a>
-        ))}
+        {/* Social Buttons */}
+        <div className="flex flex-wrap gap-3 text-gray-400">
+          {socials.map((social, idx) => (
+            <a
+              key={idx}
+              href={social.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-[#18181b] border border-[#27272a] rounded-lg px-3 py-1 text-gray-400 text-sm shadow hover:border-[#f3576c] transition"
+            >
+              {social.icon}
+              {social.name}
+            </a>
+          ))}
+        </div>
       </div>
-    </div>
+
+      {/* Extra text + link to /photos */}
+      <div className="mt-6 text-left border-t border-[#27272a] pt-4 font-figtree">
+        <p className="text-sm text-gray-400 mb-2">
+          <span>Capturing photographs</span> or scribbling a few poems...
+        </p>
+
+        <Link
+          to="/photos"
+          className="inline-block text-sm text-blue-400 hover:underline transform transition-transform duration-300 hover:scale-105"
+        >
+          click me to see
+        </Link>
+
+
+      </div>
     </Container>
-    
   );
 }
 

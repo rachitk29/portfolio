@@ -76,7 +76,7 @@ const Hero = () => {
             I love both <span className="text-white">Development</span> & <span className="text-white">Design</span>.
             So yes, I can make things look good and actually work.
             When I'm <span className="text-white">not busy</span>, you’ll usually find me watching movies or web shows,
-            listening to music, playing cricket, <span className="text-white">capturing photographs</span> or scribbling a few <span className="text-white">poems</span> because, well, that's <span className="text-white">just Rachit being Rachit</span>, or just catching up on some much needed sleep.
+            listening to music, playing cricket, or just catching up on some much needed sleep.
           </p>
 
           <p className="text-sm leading-relaxed text-gray-400 mb-2">

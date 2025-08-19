@@ -1,5 +1,5 @@
 import React from "react";
-import Container from "./Container"; 
+import Container from "./Container";
 import js from "../assets/skills/javascript.svg";
 import ts from "../assets/skills/typescript.svg";
 import c from "../assets/skills/c.svg";
@@ -59,8 +59,8 @@ function Skills() {
             <section className="py-4">
                 <h1 className="font-doto font-bold tracking-wider text-[26px] leading-8 text-[#fafafa] border-t border-[#27272a] pt-3">
                     Skills{" "}
-                    <span className="font-jetbrains-mono text-sm text-[#404040] font-normal tracking-wider">
-                        Which I use/know
+                    <span className="font-figtfree-mono text-sm text-[#404040] font-normal tracking-wide">
+                    which I use/know
                     </span>
                 </h1>
 
@@ -79,7 +79,7 @@ function Skills() {
                             {section.items.map((item, idx) => (
                                 <button
                                     key={idx}
-                                    className="flex items-center gap-2 bg-[#18181b] border border-[#27272a] rounded-lg px-3 py-2 text-white font-medium text-xs shadow transition hover:border-[#f3576c] focus:outline-none"
+                                    className="flex items-center gap-2 bg-[#18181b] border border-[#27272a] rounded-lg px-3 py-2 text-white font-medium text-xs shadow transition hover:border-[#f3576c] focus:outline-none cursor-default"
                                 >
                                     {icons[item] && (
                                         <img

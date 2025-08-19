@@ -13,6 +13,7 @@ const Hero = () => {
       hour: "2-digit",
       minute: "2-digit",
       second: "2-digit",
+      hour12: false,
     });
   };
 
@@ -28,7 +29,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="mb-2 flex flex-col justify-start items-start pt-20 text-gray-400 font-sans bg-transparent"
+      className="mb-2 flex flex-col justify-start items-start pt-16 text-gray-400 font-sans bg-transparent"
     >
       <Container>
         {/* Top Time + Location Bar */}

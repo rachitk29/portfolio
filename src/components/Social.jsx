@@ -1,6 +1,5 @@
 import React from "react";
 import Container from "./Container";
-import { Link } from "react-router-dom"; 
 import { FaEnvelope, FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
 
 function Social() {
@@ -52,20 +51,20 @@ function Social() {
         </div>
       </div>
 
-      {/* Extra text + link to /photos */}
+      {/* Extra text + Instagram link */}
       <div className="mt-6 text-left border-t border-[#27272a] pt-4 font-figtree">
         <p className="text-sm text-gray-400 mb-2">
           <span>Capturing photographs</span> or scribbling a few poems...
         </p>
 
-        <Link
-          to="/photos"
-          className="inline-block text-sm text-blue-400 hover:underline transform transition-transform duration-300 hover:scale-105"
+        <a
+          href="https://www.instagram.com/rachitk.29/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 text-sm text-blue-400 hover:underline transform transition-transform duration-300 hover:scale-105"
         >
           click me to see
-        </Link>
-
-
+        </a>
       </div>
     </Container>
   );

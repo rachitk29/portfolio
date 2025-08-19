@@ -2,30 +2,27 @@
 import React, { useState, useEffect } from "react";
 import profileImg from "../assets/profile.jpg";
 import Container from "./Container";
+import { LocateFixed } from "lucide-react";
 
 const Hero = () => {
   const [time, setTime] = useState("");
 
-  const getIndiaTime = () => {
+  const getDeviceTime = () => {
     const now = new Date();
-    const utc = now.getTime() + now.getTimezoneOffset() * 60000; 
-    const istOffset = 5.5 * 60 * 60 * 1000; 
-    const istTime = new Date(utc + istOffset);
-
-    const hours = istTime.getHours().toString().padStart(2, "0");
-    const minutes = istTime.getMinutes().toString().padStart(2, "0");
-    const seconds = istTime.getSeconds().toString().padStart(2, "0");
-
-    return `${hours}:${minutes}:${seconds}`;
+    return now.toLocaleTimeString([], {
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+    });
   };
 
   useEffect(() => {
-    setTime(getIndiaTime()); 
+    setTime(getDeviceTime());
     const interval = setInterval(() => {
-      setTime(getIndiaTime());
-    }, 1000); 
+      setTime(getDeviceTime());
+    }, 1000);
 
-    return () => clearInterval(interval); 
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -34,11 +31,16 @@ const Hero = () => {
       className="mb-2 flex flex-col justify-start items-start pt-20 text-gray-400 font-sans bg-transparent"
     >
       <Container>
-        <div className="flex justify-between items-center text-gray-400 text-sm px-4 py-2 mb-4 w-full">
+        {/* Top Time + Location Bar */}
+        <div className="flex justify-between items-center text-gray-400 text-sm mb-4 w-full">
           <span>IN {time}</span>
-          <span>📍 Mumbai, India</span>
+          <span className="flex items-center gap-1">
+            <LocateFixed size={14} />
+            Meerut (UP), India
+          </span>
         </div>
 
+        {/* Profile + Social */}
         <div className="flex flex-col items-start text-left mb-2">
           <a
             href="https://github.com/rachitk29"
@@ -73,11 +75,12 @@ const Hero = () => {
           <p className="text-sm text-gray-400 mb-3">
             I love both <span className="text-white">Development</span> & <span className="text-white">Design</span>.
             So yes, I can make things look good and actually work.
-            When I'm <span className="text-white">not busy</span>, you'll usually find me watching movies & webshows, listening music, playing cricket, or just catching up on some much-needed sleep.
+            When I'm <span className="text-white">not busy</span>, you’ll usually find me watching movies or web shows,
+            listening to music, playing cricket, <span className="text-white">capturing photographs</span> or scribbling a few <span className="text-white">poems</span> because, well, that's <span className="text-white">just Rachit being Rachit</span>, or just catching up on some much needed sleep.
           </p>
 
           <p className="text-sm leading-relaxed text-gray-400 mb-2">
-            Let's be real: I'm always chasing new things to learn, new problems to solve,
+            okay let's be real i'm always chasing new things to learn, new problems to solve,
             and if I'm lucky maybe one day my parents will finally understand
             <span className="text-white"> what I actually do!</span>
           </p>

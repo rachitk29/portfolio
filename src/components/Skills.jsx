@@ -59,8 +59,9 @@ function Skills() {
             <section className="py-4">
                 <h1 className="font-doto font-bold tracking-wider text-[26px] leading-8 text-[#fafafa] border-t border-[#27272a] pt-3">
                     Skills{" "}
-                    <span className="font-figtfree-mono text-sm text-[#404040] font-normal tracking-wide">
-                    which I use/know
+                    <span className="font-figtfree-mono text-sm text-[#404040] font-normal tracking-tight">
+                    {/* which I use/know */}
+                    which i use/know how to google it...
                     </span>
                 </h1>
 

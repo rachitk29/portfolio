@@ -1,6 +1,6 @@
 // src/components/Hero.jsx
 import React, { useState, useEffect } from "react";
-import profileImg from "../assets/profile.jpg";
+import profileImg from "../assets/profile.png";
 import Container from "./Container";
 import { LocateFixed } from "lucide-react";
 
@@ -47,7 +47,7 @@ const Hero = () => {
             href="https://github.com/rachitk29"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative w-20 h-20 rounded-full border-2 border-gray-800 shadow-md overflow-hidden select-none cursor-pointer"
+            className="relative w-20 h-20 rounded-full border-2 border-gray-500 shadow-md overflow-hidden select-none cursor-pointer"
           >
             <img
               src={profileImg}

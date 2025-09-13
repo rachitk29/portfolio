@@ -11,7 +11,7 @@ export default {
         accent: "#ffffff",
       },
       fontFamily: {
-        sans: ["Poppins", "sans-serif"],
+      sans: ["Poppins", "sans-serif"],
       figtree: ["Figtree", "sans-serif"],
       },
     },

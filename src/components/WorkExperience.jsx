@@ -17,9 +17,9 @@ const WorkExperience = () => {
             <div className="flex flex-col">
               <h3 className="flex items-center gap-2 text-lg">
                 Highspring India
-                <span className="text-xs bg-gray-700 text-gray-300 rounded-full px-2 py-1 font-medium">
+                {/* <span className="text-xs bg-gray-700 text-gray-300 rounded-full px-2 py-1 font-medium">
                   Intern
-                </span>
+                </span> */}
               </h3>
               <p className="text-gray-300 mt-1 text-xs">Associate Analyst</p>
             </div>

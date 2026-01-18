@@ -34,7 +34,7 @@ const WorkExperience = () => {
 
           {/* Description aligned to start */}
           <div className="text-gray-300 text-xs mt-2">
-            <p>• Creating a comprehensive collection of 100+ background block designs. Building reusable UI components with stunning visual backgrounds.</p>
+            {/* <p>• Creating a comprehensive collection of 100+ background block designs. Building reusable UI components with stunning visual backgrounds.</p> */}
           </div>
         </div>
       </section>

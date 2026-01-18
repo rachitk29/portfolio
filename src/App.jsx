@@ -5,6 +5,7 @@ import Projects from "./components/Projects";
 import Footer from "./components/Footer";
 import Skills from "./components/Skills";
 import Blogs from "./components/Blogs";
+import WorkExperience from "./components/WorkExperience";
 import { motion } from "framer-motion";
 import "./index.css";
 
@@ -18,6 +19,7 @@ function App() {
       <Hero />
       <Social />
       <Skills />
+      <WorkExperience />
       <Projects />
       <Blogs />
       <Footer />

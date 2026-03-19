@@ -15,7 +15,7 @@ const WorkExperience = () => {
             
             {/* Left section */}
             <div className="flex flex-col">
-              <h3 className="flex items-center gap-2 text-lg">
+              <h3 className="flex items-center gap-2 text-sm">
                 Highspring India
                 {/* <span className="text-xs bg-gray-700 text-gray-300 rounded-full px-2 py-1 font-medium">
                   Intern
@@ -26,8 +26,9 @@ const WorkExperience = () => {
 
             {/* Right section */}
             <div className="text-gray-400 text-xs sm:text-right mt-2 sm:mt-0">
-              <p>Sept 2025 - Feb 2026</p>
+              <p>Sept 2025 - Present 2026</p>
               <p>Meerut, Hybrid</p>
+              {/* <p>Walmart DSS</p> */}
             </div>
 
           </div>
